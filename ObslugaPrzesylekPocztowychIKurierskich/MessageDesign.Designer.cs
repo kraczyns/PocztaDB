@@ -199,6 +199,13 @@
             // size
             // 
             this.size.FormattingEnabled = true;
+            this.size.Items.AddRange(new object[] {
+            "Pocztówka",
+            "List",
+            "Mała paczka",
+            "Średnia paczka",
+            "Duża paczka",
+            "Wielka paczka"});
             this.size.Location = new System.Drawing.Point(79, 231);
             this.size.Name = "size";
             this.size.Size = new System.Drawing.Size(188, 21);
@@ -272,6 +279,10 @@
             // status
             // 
             this.status.FormattingEnabled = true;
+            this.status.Items.AddRange(new object[] {
+            "Otrzymano",
+            "W drodze",
+            "Gotowe do przesłania"});
             this.status.Location = new System.Drawing.Point(385, 220);
             this.status.Name = "status";
             this.status.Size = new System.Drawing.Size(213, 21);

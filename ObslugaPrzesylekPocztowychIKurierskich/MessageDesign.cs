@@ -21,7 +21,8 @@ namespace ObslugaPrzesylekPocztowychIKurierskich
         {
             Message newMessage = new Message(new Person(senderName.Text, senderSurname.Text, address.Text), 
                 new Person(recipientName.Text, recipientSurname.Text, recipientAddress.Text), 
-                (double)cost.Text, size, status, dateSend.Text, dateReceive.Text, priority.Checked, paymentLater.Checked, msng);
+                Convert.ToDouble(cost.Text), (MsgSize)size.SelectedIndex, (MsgStatus)status.SelectedIndex, dateSend.Value.Date, dateReceive.Value.Date, priority.Checked, paymentLater.Checked, 0);
+            newMessage.addMessageToDB(newMessage);
         }
     }
 }
